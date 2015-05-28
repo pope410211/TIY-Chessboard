@@ -1,10 +1,12 @@
 /*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -28,7 +30,6 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -53,12 +54,7 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
 }
 
@@ -95,25 +91,125 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-width: 1in;
+    max-width: 8in;
+}
+.chessboard {
+
+}
+.chessboard .row {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    clear: both;
+}
+.chessboard .row::before,
+.chessboard .row::after {
+    font-size: 200%;
+    position: absolute;
+}
+.chessboard .row::before {
+    right: 100%;
+}
+.chessboard .row::after {
+    left: 100%;
+}
+/*.chessboard::before,
+.chessboard::after {
+    font-size: 500%;
+    position: absolute;
+}*/
+/*.chessboard::before {
+    right: 100%;
+}
+.chessboard::after {
+    left: 100%;
+}*/
+
+.chessboard .rank-8::before,
+.chessboard .rank-8::after{
+   content:'8';
+}.chessboard .rank-7::before,
+.chessboard .rank-7::after{
+   content:'7';
+}.chessboard .rank-6::before,
+.chessboard .rank-6::after{
+   content:'6';
+}.chessboard .rank-5::before,
+.chessboard .rank-5::after{
+   content:'5';
+}.chessboard .rank-4::before,
+.chessboard .rank-4::after{
+   content:'4';
+}.chessboard .rank-3::before,
+.chessboard .rank-3::after{
+   content:'3';
+}
+.chessboard .rank-2::before,
+.chessboard .rank-2::after {
+    content: '2';
+}
+.chessboard .rank-1::before,
+.chessboard .rank-1::after{
+   content:'1';
+}
+
+.chessboard .square {
+    background-color: darkgreen;
+    width: 12.5%;
+    padding-bottom: 12.5%;
+    outline: 1px solid red;
+    float: left;
+    list-style: none;
+}
+.chessboard .row:nth-child(even) .square:nth-child(even) {
+    background-color: darkgreen;
+}
+.chessboard .row:nth-child(even) .square:nth-child(odd) {
+    background-color: gold;
+}
+.chessboard .square:nth-child(even) {
+    background-color: gold;
+}
+
+/*buttons --need work*/
+.buttons li {
+  list-style: none;
+  font-size: 20pt;
+  position: relative;
+  float: left;
+  padding: 0 1em 1em 1em;
+  padding-top: 1.5em;
+  color: darkred;
+  text-align: center;
+  background-color: green;
+  width: 10%;
+}
+
+.buttons li:hover {
+  cursor: pointer;
+}
+.buttons .play-pause::before{
+  content:'\25b8';
+}
+
+.buttons .play-pause::after {
+  content: '\2016';
+}
+/*.chessboard.square::after {
+     content: '\24';*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*}*/
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers:
@@ -145,8 +241,7 @@ textarea {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -175,12 +270,12 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
-
 .clearfix:after {
     clear: both;
 }
@@ -194,10 +289,7 @@ textarea {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -208,72 +300,52 @@ textarea {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
-
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
