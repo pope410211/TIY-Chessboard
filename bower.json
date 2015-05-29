@@ -1,0 +1,21 @@
+{
+  "name": "TIY-Chessboard",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pope410211/TIY-Chessboard",
+  "authors": [
+    "Nick Pope <pope410211@gmail.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "license": "CCO",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
