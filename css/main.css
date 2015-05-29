@@ -128,6 +128,146 @@ textarea {
 .chessboard::after {
     left: 100%;
 }*/
+/*Black chess pieces begin*/
+.chessboard .rank-7 .square::before {
+  content:'\265f';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-a::before {
+  content:'\265c';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-h::before {
+  content:'\265c';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-b::before {
+  content:'\265e';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-g::before {
+  content:'\265e';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-c::before {
+  content:'\265d';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-f::before {
+  content:'\265d';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-d::before {
+  content: '\265b';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-8 .file-e::before {
+  content: '\265a';
+  font-size: 40pt;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+/*Black chess pieces End ^^^*/
+
+/*white chess pieces begin*/
+.chessboard .rank-2 .square::before {
+  content:'\265f';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-a::before {
+  content:'\265c';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-h::before {
+  content:'\265c';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-b::before {
+  content:'\265e';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-g::before {
+  content:'\265e';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-c::before {
+  content:'\265d';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-f::before {
+  content:'\265d';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-d::before {
+  content: '\265b';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+.chessboard .rank-1 .file-e::before {
+  content: '\265a';
+  font-size: 40pt;
+  color: white;
+  position: absolute;
+  padding-left: .75ex;
+  z-index: 2;
+}
+/*white chess pieces end ^^*/
 
 .chessboard .rank-8::before,
 .chessboard .rank-8::after{
@@ -158,21 +298,29 @@ textarea {
 }
 
 .chessboard .square {
-    background-color: darkgreen;
+    background-color: gold;
     width: 12.5%;
     padding-bottom: 12.5%;
-    outline: 1px solid red;
+    outline: 1px solid black;
     float: left;
     list-style: none;
 }
 .chessboard .row:nth-child(even) .square:nth-child(even) {
-    background-color: darkgreen;
+    background-color: gold;
 }
 .chessboard .row:nth-child(even) .square:nth-child(odd) {
-    background-color: gold;
+    background-color: darkgreen;
 }
 .chessboard .square:nth-child(even) {
-    background-color: gold;
+    background-color: darkgreen;
+}
+
+.files li {
+  list-style: none;
+  font-size: 200%;
+  position: relative;
+  float: left;
+  ;
 }
 
 /*buttons --need work*/
@@ -189,7 +337,7 @@ textarea {
   width: 10%;
 }
 
-.buttons li:hover {
+.buttons a:hover {
   cursor: pointer;
 }
 .buttons .play-pause::before{
