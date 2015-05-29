@@ -117,17 +117,7 @@ textarea {
 .chessboard .row::after {
     left: 100%;
 }
-/*.chessboard::before,
-.chessboard::after {
-    font-size: 500%;
-    position: absolute;
-}*/
-/*.chessboard::before {
-    right: 100%;
-}
-.chessboard::after {
-    left: 100%;
-}*/
+
 /*Black chess pieces begin*/
 .chessboard .rank-7 .square::before {
   content:'\265f';
@@ -323,6 +313,7 @@ textarea {
   ;
 }
 
+
 /*buttons --need work*/
 .buttons li {
   list-style: none;
@@ -333,7 +324,7 @@ textarea {
   padding-top: 1.5em;
   color: darkred;
   text-align: center;
-  background-color: green;
+
   width: 10%;
 }
 
