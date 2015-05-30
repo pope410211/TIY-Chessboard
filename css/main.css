@@ -113,6 +113,7 @@ body {
 .chessboard .row::after {
     font-size: 200%;
     position: absolute;
+    padding-top: .65em;
     color: #d3ffce;
 }
 .chessboard .row::before {
@@ -309,12 +310,23 @@ body {
     background-color: #3df249;
 }
 
-.files li {
+.files1 li {
+  margin: 0; padding: 0;
+  width: 12.5%;
   list-style: none;
   font-size: 200%;
-  position: relative;
+  display: inline-block;
   float: left;
-  ;
+  color:#d3ffce;
+}
+.files2 li {
+  margin: 0; padding: 0;
+  width: 12.5%;
+  list-style: none;
+  font-size: 200%;
+  display: inline-block;
+  float: left;
+  color:#d3ffce;
 }
 
 
@@ -342,10 +354,7 @@ body {
   content: '\2016';
 }
 
-@media screen {
-  body {width: 100%;}
-  style {width:100%;}
-}
+
 /*.chessboard.square::after {
      content: '\24';*/
 
