@@ -1,7 +1,13 @@
 (function(window) {
 
 
-  var game = [
+  var game = [ //list of 5-tuples representing fromRank, fromFile, toRank, toFile
+    // { fromRank: '.rank-2',
+    //   fromFile: '.file-d',
+    //   toRank:'.rank-4',
+    //   toFile:'.file-d',
+    //   piece:'whitepawn'
+    // }
     ['.rank-2', '.file-d', '.rank-4', '.file-d', 'whitepawn'],
     ['.rank-8', '.file-g', '.rank-6', '.file-f', 'blackknight'],
     ['.rank-2', '.file-c', '.rank-4', '.file-c', 'whitepawn'],
@@ -26,12 +32,13 @@
   ];
 
 
-  var counter = -1;
+  var counter = 0;
 
 /**
- *@param{Array} whichMove - 
- *@
- */
+ *@param{Array} whichMove [fromRank, fromFile, toRank, toFile, piece]
+ *@TODO move this function to main.js
+*/
+
   function move(whichMove){
       $(whichMove[0] + ' > ' + whichMove[1]).removeClass(whichMove[4]);
       $(whichMove[2] + ' > ' + whichMove[3]).addClass(whichMove[4]);

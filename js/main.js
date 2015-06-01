@@ -1,13 +1,23 @@
 (function(window) {
 
 
-$('.N').click(function(){
+      $('.L').click(function() {
+        for (chess.counter; chess.counter < chess.game.length;
+        };
+      });
 
-  $('.rank-1 > .file-d').removeClass('.rank-1 > .file-d');
-  $('.rank-4 > .file-d').addClass('.rank-1 > .file-d');
 
-});
+      $('.N').click(function() {
+      if (chess.counter < chess.game.length) {
+        chess.move(chess.game[chess.counter]);
+        chess.counter = chess.counter + 1;
+          }
+      });
 
+      $('.P').click(function() {
+        chess.counter = (chess.counter + 1) % chess.game.length;
+        chess.move(chess.reverseGame[chess.counter]);
+      });
 })(window);
 
 // Stolen shamlessly from sunday's work group.
