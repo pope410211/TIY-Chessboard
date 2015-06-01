@@ -1,13 +1,21 @@
-(function () {
-  window.chess ={
-
-var board = {
-  rank= ["1", "2", "3", "4", "5", "6", "7", "8"],
-  file= ["a", "b", "c", "d", "e", "f", "g", "h"]
-};
-
-var piece = function(rank, file);
+(function(window) {
 
 
-  };
+      $('.L').click(function() {
+        for (i = 0; i < chess.game.length; i++) {
+          chess.move(chess.game[i]);
+        };
+      });
+
+
+      $('.N').click(function() {
+        chess.counter = (chess.counter + 1) % chess.game.length;
+      });
+
+      $('.P').click(function() {
+        chess.counter = (chess.counter + 1) % chess.game.length;
+        chess.move(chess.reverseGame[chess.counter]);
+      });
 })(window);
+
+// Stolen shamlessly from sunday's work group.
