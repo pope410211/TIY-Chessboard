@@ -28,6 +28,10 @@
 
   var counter = -1;
 
+/**
+ *@param{Array} whichMove - 
+ *@
+ */
   function move(whichMove){
       $(whichMove[0] + ' > ' + whichMove[1]).removeClass(whichMove[4]);
       $(whichMove[2] + ' > ' + whichMove[3]).addClass(whichMove[4]);
@@ -42,3 +46,4 @@
 
 
 })(window);
+// shamlessly Stolen

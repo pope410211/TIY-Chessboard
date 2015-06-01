@@ -331,28 +331,24 @@ body {
 
 
 /*buttons --need work*/
-.buttons li {
+.buttons {
   list-style: none;
-  font-size: 20pt;
+}
+button {
   position: relative;
   float: left;
   padding: 0 1em 1em 1em;
   padding-top: 1.5em;
   color: #00e0ff;
   text-align: center;
-  width: 10%;
+  width: 20%;
+  background-color: black;
+  border-color: black;
+  font-size: 20pt;
+
 }
 
-.buttons a:hover {
-  cursor: pointer;
-}
-.buttons .play-pause::before{
-  content:'\25b8';
-}
 
-.buttons .play-pause::after {
-  content: '\2016';
-}
 
 
 /*.chessboard.square::after {
