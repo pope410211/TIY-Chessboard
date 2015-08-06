@@ -18,7 +18,7 @@
 
 <body>
     <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <button href="http://browsehappy.com/">upgrade your browser</button> to improve your experience.</p>
         <![endif]-->
     <style>
 
@@ -37,24 +37,24 @@
             <li>H</li>
           </ul>
           <ul class="row rank-8">
-              <li class="square file-a"></li>
-              <li class="square file-b"></li>
-              <li class="square file-c"></li>
-              <li class="square file-d"></li>
-              <li class="square file-e"></li>
-              <li class="square file-f"></li>
-              <li class="square file-g"></li>
-              <li class="square file-h"></li>
+              <li class="square file-a blackrook"></li>
+              <li class="square file-b blackknight"></li>
+              <li class="square file-c blackbishop"></li>
+              <li class="square file-d blackqueen"></li>
+              <li class="square file-e blackking"></li>
+              <li class="square file-f blackbishop"></li>
+              <li class="square file-g blackknight"></li>
+              <li class="square file-h blackrook"></li>
           </ul>
           <ul class="row rank-7">
-              <li class="square file-a"></li>
-              <li class="square file-b"></li>
-              <li class="square file-c"></li>
-              <li class="square file-d"></li>
-              <li class="square file-e"></li>
-              <li class="square file-f"></li>
-              <li class="square file-g"></li>
-              <li class="square file-h"></li>
+              <li class="square file-a blackpawn"></li>
+              <li class="square file-b blackpawn"></li>
+              <li class="square file-c blackpawn"></li>
+              <li class="square file-d blackpawn"></li>
+              <li class="square file-e blackpawn"></li>
+              <li class="square file-f blackpawn"></li>
+              <li class="square file-g blackpawn"></li>
+              <li class="square file-h blackpawn"></li>
           </ul>
           <ul class="row rank-6">
               <li class="square file-a"></li>
@@ -98,24 +98,24 @@
           </ul>
             <ul class="row rank-2">
                 <!-- small square -->
-                <li class="square file-a"></li>
-                <li class="square file-b"></li>
-                <li class="square file-c"></li>
-                <li class="square file-d"></li>
-                <li class="square file-e"></li>
-                <li class="square file-f"></li>
-                <li class="square file-g"></li>
-                <li class="square file-h"></li>
+                <li class="square file-a whitepawn"></li>
+                <li class="square file-b whitepawn"></li>
+                <li class="square file-c whitepawn"></li>
+                <li class="square file-d whitepawn"></li>
+                <li class="square file-e whitepawn"></li>
+                <li class="square file-f whitepawn"></li>
+                <li class="square file-g whitepawn"></li>
+                <li class="square file-h whitepawn"></li>
             </ul>
             <ul class="row rank-1">
-                <li class="square file-a"></li>
-                <li class="square file-b"></li>
-                <li class="square file-c"></li>
-                <li class="square file-d"></li>
-                <li class="square file-e"></li>
-                <li class="square file-f"></li>
-                <li class="square file-g"></li>
-                <li class="square file-h"></li>
+                <li class="square file-a whiterook"></li>
+                <li class="square file-b whiteknight"></li>
+                <li class="square file-c whitebishop"></li>
+                <li class="square file-d whitequeen"></li>
+                <li class="square file-e whiteking"></li>
+                <li class="square file-f whitebishop"></li>
+                <li class="square file-g whiteknight"></li>
+                <li class="square file-h whiterook"></li>
             </ul>
         <ul class="files1">
           <li>A</li>
@@ -128,14 +128,18 @@
           <li>H</li>
         </ul>
         <ul class="buttons">
-          <li><a class="F">First</a></li>
-          <li><a class="P">&#8606;</a></li>
-          <li><a class="play-pause"></a></li>
-          <li><a class="N">&#8608;</a></li>
-          <li><a class="L">Last</a></li>
+          <li><button class="F">&#10527;</button></li>
+          <li><button class="P">&#8606;</button></li>
+          <li><button class="play-pause"> &#9656; / &#8214;</button></li>
+          <li><button class="N">&#8608;</button></li>
+          <li><button class="L">&#10528;</button></li>
         </ul>
       </div>
     </main>
+    <script src="bower_components/jQuery/dist/jquery.min.js"></script>
+    <script src="js/main.js"> </script>
+    <script src="js/models.js"></script>
+
 
 </body>
 
