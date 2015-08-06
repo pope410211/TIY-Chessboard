@@ -2,8 +2,7 @@
 
 
       $('.L').click(function() {
-        for (chess.counter; chess.counter < chess.game.length;
-        };
+        for (chess.counter; chess.counter < chess.game.length)
       });
 
 
